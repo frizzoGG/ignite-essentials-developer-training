@@ -9,7 +9,7 @@ Check [the complete schedule](https://www.gridgain.com/products/services/trainin
 * Apache Maven 3.0 or later
 * Your favorite IDE, such as IntelliJ IDEA, or Eclipse, or a simple text editor.
 
-## Clone The Project
+## A. Clone The Project
 
 1. Clone the training project with Git or download it as an archive:
     ```bash
@@ -19,7 +19,7 @@ Check [the complete schedule](https://www.gridgain.com/products/services/trainin
 2. (optionally), open the project in your favourite IDE such as IntelliJ or Eclipse, or just use a simple text editor
 and command-line instructions prepared for all the samples.    
 
-## Starting Ignite Cluster
+## B. Starting Ignite Cluster
 
 Start a two-node Ignite cluster:
 
@@ -42,7 +42,7 @@ start the sample code with IntelliJ IDEA or Eclipse. The JAR is used by other to
 
 Both nodes auto-discover each other and you'll have a two-nodes cluster ready for exercises.
  
-## Connecting to GridGain Control Center
+## C. Connecting to GridGain Control Center
 
 You use [GridGain Control Center](https://control.gridgain.com) throughout the course to see how Ignite distributes 
 records, to execute and optimize SQL queries, and to monitor the state of the cluster.
@@ -65,7 +65,7 @@ records, to execute and optimize SQL queries, and to monitor the state of the cl
 4. [Register the cluster](https://www.gridgain.com/docs/control-center/latest/clusters#adding-clusters) with Control Center 
 using the token.
 
-## Creating Media Store Schema and Loading Data
+## D. Creating Media Store Schema and Loading Data
 
 Now you need to create a Media Store schema and load the cluster with sample data. Use SQLLine tool to achieve that:
 
@@ -88,7 +88,7 @@ Now you need to create a Media Store schema and load the cluster with sample dat
 
 Keep the connection open as you'll use it for following exercises.
 
-## Data Partitioning - Checking Data Distribution
+## E. Data Partitioning - Checking Data Distribution
 
 With the Media Store database loaded, you can check how Ignite distributed the records within the cluster:
 
@@ -99,12 +99,12 @@ Control Center.
 
 Optional, scale out the cluster by the third node. You'll see that some partitions were rebalanced to the new node.
 
-## Affinity Co-location - Optimizing Complex SQL Queries With JOINs
+## F. Affinity Co-location - Optimizing Complex SQL Queries With JOINs
 
 Ignite supports SQL for data processing including distributed joins, grouping and sorting. In this section, you're 
 going to run basic SQL operations as well as more advanced ones.
 
-### Querying Single Table
+### G. Querying Single Table
 
 1. Go to the [SQL Notebooks Screen](https://www.gridgain.com/docs/control-center/latest/querying) of Control Center.
  
@@ -116,7 +116,7 @@ going to run basic SQL operations as well as more advanced ones.
     GROUP BY trackid, name ORDER BY duration DESC LIMIT 20;
     ```
 
-### Joining Two Non-Colocated Tables
+### H. Joining Two Non-Colocated Tables
 
 1. Modify the previous query by adding information about an author. You do this by doing a LEFT
 JOIN with the `Artist` table:
